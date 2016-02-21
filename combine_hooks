@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+source .drupal-dev-lib
+hooks_dir="./hooks"
+theme_name="decisionary"
+hook_fragment="$1"
+
+cat $hooks_dir/* > template.php

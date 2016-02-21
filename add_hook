@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+source .drupal-dev-lib
+
+hooks_dir="./hooks"
+theme_name="decisionary"
+hook_fragment="$1"
+
+hook_name=$theme_name"_"$hook_fragment
+
+if [ ! -d $hooks_dir ]
+then
+	echo "Creating hooks directory..."
+	mkdir $hooks_dir
+fi
+
+if [ ! -f $hookname".php" ]
+then
+	echo "Hook not in use, creating fragment file: '$hook_name.php'..."
+
+	read -r -d '' VAR <<EOT
+	<?php
+
+function $hook_name() {
+	//Enter hook code here
+}
+
+EOT
+
+	echo "$VAR" > $hooks_dir/$hook_name".php"
+fi
+
+echo $hook_name

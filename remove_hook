@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+source .drupal-dev-lib
+hooks_dir="./hooks"
+theme_name="decisionary"
+hook_fragment="$1"
+
+hook_name=$theme_name"_"$hook_fragment
+
+if [ -f $hooks_dir/$hook_name".php" ]
+then
+	echo "Removing "$hooks_dir/$hook_name".php"
+	rm $hooks_dir/$hook_name".php"
+	echo "Removed: "$hook_name".php"
+else
+	echo "Hook not in use.  Skipping..."
+fi

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+export DRUPAL_DEV_LIB_PROJECT_ROOT="/your/project/path/here"
+export DRUPAL_DEV_LIB_SITENAME="my-drupal-site"
+export DRUPAL_DEV_LIB_THEMENAME="my-drupal-site"

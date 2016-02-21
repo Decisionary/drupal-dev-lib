@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+source .drupal-dev-lib
+
+echo "Project Root: $DRUPAL_DEV_LIB_PROJECT_ROOT";
+echo "Site Name: $DRUPAL_DEV_LIB_SITENAME";
+echo "Site Root: $DRUPAL_DEV_LIB_PROJECT_ROOT/sites/$DRUPAL_DEV_LIB_SITENAME";
+echo "Theme Name: $DRUPAL_DEV_LIB_THEMENAME";
+echo "Theme Root: $DRUPAL_DEV_LIB_PROJECT_ROOT/sites/$DRUPAL_DEV_LIB_SITENAME/themes/$DRUPAL_DEV_LIB_THEMENAME";

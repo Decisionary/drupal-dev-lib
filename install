@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+if [ $1 ] && [ -d $1 ]
+then
+	root_dir=$1
+else
+	root_dir="./"
+fi
+
+cp settings.sample $root_dir/.drupal-dev-lib
